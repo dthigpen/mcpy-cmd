@@ -1,0 +1,17 @@
+[project]
+name = "mcpy-cmd"
+version = "0.1.0"
+authors = [{ name = "David Thigpen", email = "davidthigs@gmail.com" }]
+description = "A Python wrapper for writing Minecraft commands"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+# development dependency groups
+dev = ["pytest"]
+test = ["pytest"]
+# pytest options
+[tool.pytest.ini_options]
+addopts = " -ra -q"
+testpaths = ["tests"]
