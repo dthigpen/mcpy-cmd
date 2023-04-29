@@ -116,3 +116,12 @@ def test_data():
         Data.Storage("test.example", "foopath").merge("{foo:1b}"),
     )
     # modify
+
+def test_execute():
+    __assert_cmds('execute align xy run say hi',
+        Execute().align('xy').run('say hi')
+    )
+
+    __assert_cmds('execute anchor eyes run say hi',
+        Execute().anchored(Anchor.EYES).run('say hi')
+    )
