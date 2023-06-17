@@ -8,10 +8,10 @@ Use with any Python datapack generator such as [mcpy](https://github.com/dthigpe
 
 ```python
 # mcpy
-foo = Scoreboard.Player("$foo", "obj")
-item = Data.Storage('item','dt.example')
-yield foo.set(5)
-yield item.modify().set_from(Data.Entity('@s','SelectedItem'))
+foo = Score("$foo", "obj")
+block_items = BlockPath('~1 ~2 ~3', 'Items')
+items = StoragePath('items','dt.example')
+yield from modify_set(items, block_items)
 ```
 
 ## Installation
